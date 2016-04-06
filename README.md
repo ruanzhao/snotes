@@ -1,0 +1,2 @@
+# snotes
+Simple notes
