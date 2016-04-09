@@ -6,10 +6,12 @@
     </head>
     <body>
         <h1>登录form</h1>
-        <form action="" method="POST">
-            <input type="text" name="username" /><br/>
-            <input type="password" name="passord" /><br/>
-            <input type="submit" value="登录" /> 
-        </form>
+
+        <div>{{ render_form(url_for('accounts.login'), form)}}</div>
+        <!--<form action="" method="POST">-->
+            <!--<input type="text" name="username" /><br/>-->
+            <!--<input type="password" name="passord" /><br/>-->
+            <!--<input type="submit" value="登录" /> -->
+        <!--</form>-->
     </body>
 </html>

@@ -11,3 +11,5 @@ python-editor==1.0
 invoke==0.12.2
 flask-sqlalchemy==2.1
 flask-login==0.3.2
+WTForms==2.1
+flask-wtf==0.12
