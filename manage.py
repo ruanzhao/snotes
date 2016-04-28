@@ -1,4 +1,4 @@
-#!/usr/bin/bin python
+#!/usr/bin/env python
 
 from snotes import create_app
 

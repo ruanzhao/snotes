@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Sign in to SNotes · SNotes</title>
+    </head>
+    <body>
+        <div>Sign Form</div>
+        <form action="" method="POST">
+            <div>{{ form.username.label }} : {{ form.username() }}</div>
+            <div>{{ form.password.label }} : {{ form.password() }}</div>
+            <div>{{ form.remember.label }} : {{ form.remember() }}</div>
+            <div>{{ form.submit }}</div>
+        </form>
+    </body>
+</html>

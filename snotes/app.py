@@ -4,7 +4,7 @@ from flask import Flask
 from snotes.config import DefaultConfig
 from snotes.database import db
 from snotes.extensions import login_manager
-from snotes.accounts.models import User
+from snotes.home.models import User
 
 
 __all__ = ['create_app']
@@ -26,9 +26,9 @@ def create_app(app_name=None, config=None):
 
 def _register_blueprints(app):
     from snotes.home import home
-    from snotes.accounts import bp as accounts
+    from snotes.note import note
     app.register_blueprint(home, url_prefix=None)
-    app.register_blueprint(accounts, url_prefix='/accounts')
+    app.register_blueprint(note, url_prefix='/note')
 
 def _configure_app(app, config=None):
     """ Configure app. """
@@ -37,8 +37,8 @@ def _configure_app(app, config=None):
 def _configure_extensions(app):
     db.init_app(app)
 
-    login_manager.login_view = '/accounts/login'
-    login_manager.refresh_view = '/accounts/loign'
+    login_manager.login_view = '/home/login'
+    login_manager.refresh_view = '/home/loign'
 
     @login_manager.user_loader
     def load_user(id):
